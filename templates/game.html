@@ -4,7 +4,7 @@
     <title>Game</title>
 </head>
 <body>
-    <form action="/madlib">
+    <form action="/madlib" method="POST">
         What is your name? <input type = "text" name="person"><br>
         Pick a color:
         <input type="radio" name="color" value="blue">blue
@@ -19,7 +19,13 @@
             <option value="python">python</option>
             <option value="fork">fork</option>
         </select><br>
-        Enter an adjective <input type = "text" name="adj"><br>
+        Pick 3 adjectives: 
+        <input type = "checkbox" name="adj" value="nice">Nice
+        <input type = "checkbox" name="adj" value="big">Big
+        <input type = "checkbox" name="adj" value="awesome">Awesome
+        <input type = "checkbox" name="adj" value="colorful">colorful
+        <input type = "checkbox" name="adj" value="sticky">sticky<br>
+
         <input type ="submit">
 
     </form>
