@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="./static/madlibs.css">
     <title>Game</title>
 </head>
 <body>
     <form action="/madlib" method="POST">
-        What is your name? <input type = "text" name="person"><br>
+        Enter a name: <input type = "text" name="person"><br>
         Pick a color:
-        <input type="radio" name="color" value="blue">blue
-        <input type="radio" name="color" value="pink">pink
-        <input type="radio" name="color" value="mauve">mauve
-        <input type="radio" name="color" value="orange">orange<br>
+        <input type="radio" name="color" value="blue">
+        <span id="blue">blue</span>
+        <input type="radio" name="color" value="pink" id="pink">
+        <span id="pink">pink</span>
+        <input type="radio" name="color" value="mauve" id="mauve">
+        <span id="mauve">mauve</span>
+        <input type="radio" name="color" value="orange" id="orange">
+        <span id="orange">orange</span><br>
         Pick a Noun:
         <select name="noun">
             <option value="lamp">lamp</option>
@@ -20,13 +25,13 @@
             <option value="fork">fork</option>
         </select><br>
         Pick 3 adjectives: 
-        <input type = "checkbox" name="adj" value="nice">Nice
-        <input type = "checkbox" name="adj" value="big">Big
-        <input type = "checkbox" name="adj" value="awesome">Awesome
+        <input type = "checkbox" name="adj" value="nice">nice
+        <input type = "checkbox" name="adj" value="big">big
+        <input type = "checkbox" name="adj" value="awesome">awesome
         <input type = "checkbox" name="adj" value="colorful">colorful
         <input type = "checkbox" name="adj" value="sticky">sticky<br>
 
-        <input type ="submit">
+        <input class ="button" type ="submit">
 
     </form>
 </body>

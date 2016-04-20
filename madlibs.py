@@ -1,4 +1,5 @@
 from random import choice
+from random import sample
 
 from flask import Flask, render_template, request
 
@@ -10,7 +11,7 @@ app = Flask(__name__)
 AWESOMENESS = [
     'awesome', 'terrific', 'fantastic', 'neato', 'fantabulous', 'wowza', 'oh-so-not-meh',
     'brilliant', 'ducky', 'coolio', 'incredible', 'wonderful', 'smashing', 'lovely']
-
+LIBS = ['madlib.html', 'madlib2.html', 'madlib3.html']
 
 @app.route('/')
 def start_here():
@@ -32,11 +33,11 @@ def greet_person():
 
     player = request.args.get("person")
 
-    compliment = choice(AWESOMENESS)
+    compliments = sample(AWESOMENESS, 3)
 
     return render_template("compliment.html",
                            person=player,
-                           compliment=compliment)
+                           compliments=compliments)
 
 @app.route('/game')
 def show_game_form():
@@ -55,15 +56,14 @@ def show_madlib():
     person = request.form.get("person")
     noun = request.form.get("noun")
     color = request.form.get("color")
-    # adj1,adj2,adj3 = request.args.get("adj")
+    
     adj = request.form.getlist("adj")
-    # thing2 = request.args.get("adj")
+    madlib_choice = choice(LIBS)
+    
 
-    # print thing 
 
-
-    return render_template("madlib.html", person=person,
-        noun=noun,color=color,adj1=adj[0], adj2=adj[1], adj3=adj[2])
+    return render_template(madlib_choice, person=person,
+        noun=noun,color=color,adjectives=adj)
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app

@@ -1,0 +1,41 @@
+html {
+    color: gray;
+    font-family: sans-serif;
+}
+
+form {
+    margin:2em;
+    line-height: 2em;
+}
+
+#blue {
+    color: blue;
+}
+
+#mauve {
+    color: purple;
+}
+
+#orange {
+    color: orange;
+}
+
+#pink {
+    color: red;
+}
+
+.button {
+    background-color: #ff4da6; /* Green */
+    border: dotted;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+footer {
+    font-family: Courier;
+    color: purple;
+}

@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <link rel="stylesheet" href="./static/madlibs.css">
     <title>A Madlib!</title>
 </head>
 <body>
@@ -8,7 +9,7 @@
     Your madlib:
 </h1>
     <p>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally {{ adj1 }}, {{ adj2 }}, {{ adj3 }} way.
+    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally {% for adjective in adjectives %} {{adjective}}, {% endfor %} way.
     </p>
 </body>
 </html>
